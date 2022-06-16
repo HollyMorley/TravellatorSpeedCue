@@ -14,13 +14,13 @@ class Main(movingDots.MovingDots):
 
     def set_speed(self):
 
-        speedb2 = float(input("Enter visual cue speed for BELT 1 (m/s):"))
-        speedb1 = float(input("Enter visual cue speed for BELT 2 (m/s):"))
+        self.speedb2 = float(input("Enter visual cue speed for BELT 1 (m/s):"))
+        self.speedb1 = float(input("Enter visual cue speed for BELT 2 (m/s):"))
 
         #self.dsBelt1.speed = speedb1*100  #convert chosen speed (m/s) into cm/s and adjust animation speed
         #self.dsBelt2.speed = speedb2*100
-        self.dsBelt1.speed = speedb1 * 100 / -57 #* - 0.0155  #convert chosen speed (m/s) into cm/s and adjust animation speed (with scaling for visual purposes)
-        self.dsBelt2.speed = speedb2 * 100 / -57 #* - 0.0155
+        self.dsBelt1.speed = self.speedb1 * 100 / -57 #* - 0.0155  #convert chosen speed (m/s) into cm/s and adjust animation speed (with scaling for visual purposes)
+        self.dsBelt2.speed = self.speedb2 * 100 / -57 #* - 0.0155
 
 
     def run_animation(self):

@@ -12,9 +12,10 @@ class Config:
     '''
     # *****Config settings to choose*****
     # Platform config
-    platformWidth = 37
+    platformWidth = 59#40
     platformHeight = 6
     platformColour = (-1, -1, -1)
+    platformLineWidth = 0
 
     # Belt config
     beltWidth = 5
@@ -37,9 +38,9 @@ class Config:
     screen_width_px = root.winfo_screenwidth()
     screen_height_px = root.winfo_screenheight()'''
     if monitor_choice == 'Projector':
-        screen_width_px = 1920  # **** HAVE HAD TO SET THESE MANUALLY AS CANT GET EXTERNAL SCREEN INFO WITH THE ABOVE METHOD****
+        screen_width_px = 1920 # **** HAVE HAD TO SET THESE MANUALLY AS CANT GET EXTERNAL SCREEN INFO WITH THE ABOVE METHOD****
         screen_height_px = 1080
-        monitorwidth = 143.3  # in cm
+        monitorwidth = 210#143.3  # in cm THIS IS WHERE ****MANUALLY**** ADJUST ACTUAL VISUAL CUE SPEED
         viewdist = 20.  # viewing distance in cm
         monitorname = 'Projector'
         scrn = 1  # 0 to use main screen, 1 to use external screen
@@ -69,3 +70,6 @@ class Config:
 
     monitorStart = monitorwidth * -0.5
     monitorEnd = monitorwidth * 0.5
+
+    travellatorCentre = -1.3 # offet for centre point of the travellator. The more positive the number the further right the centre moves.
+    travellatorCentre = travellatorCentre * -1
